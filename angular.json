@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "angular-final-project": {
+    "fires-catalanes-dwm": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -62,10 +62,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-final-project:build:production"
+              "buildTarget": "fires-catalanes-dwm:build:production"
             },
             "development": {
-              "buildTarget": "angular-final-project:build:development"
+              "buildTarget": "fires-catalanes-dwm:build:development"
             }
           },
           "defaultConfiguration": "development"
