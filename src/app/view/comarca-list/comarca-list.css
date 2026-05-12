@@ -1,0 +1,23 @@
+.list-group-item {
+    cursor: pointer;
+    padding: 16px 20px;
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-left: 4px solid transparent;
+    background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+    margin-bottom: 12px;
+    font-weight: 700;
+    color: #1a1a2e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+}
+
+.list-group-item:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-left-color: #fbbf24;
+    transform: translateX(8px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}

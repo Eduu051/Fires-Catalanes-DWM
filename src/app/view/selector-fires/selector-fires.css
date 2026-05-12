@@ -1,0 +1,34 @@
+.selector-box {
+    padding: 30px;
+    border-radius: 0;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border: 1px solid #d1d1cf;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+select {
+    padding: 12px 20px;
+    font-size: 14px;
+    border: 1px solid #1a2a44;
+    border-radius: 0;
+    background: white;
+    color: #1a2a44;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+select:hover {
+    border-color: #c5a059;
+    background-color: #f9f9f7;
+}
+
+select:focus {
+    outline: none;
+    border-color: #c5a059;
+    box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.2);
+}

@@ -1,0 +1,36 @@
+.layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    padding: 20px;
+}
+
+.right {
+    border-left: 2px solid #c5a059;
+    padding-left: 40px;
+}
+
+.right h2 {
+    color: #1a2a44;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .right {
+        border-left: none;
+        border-top: 2px solid #c5a059;
+        padding-left: 0;
+        padding-top: 40px;
+    }
+}

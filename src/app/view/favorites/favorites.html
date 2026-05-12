@@ -1,0 +1,24 @@
+<h1>Fires preferides</h1>
+
+<div class="favorites-container">
+    @for(fair of getFavoriteFairs(); track fair.activityId) {
+    <div class="favorite-card">
+        <h2>{{ fair.activityName }}</h2>
+        <p>
+            <strong>Poble:</strong>
+            {{ fair.municipalityName }}
+        </p>
+        <p>
+            <strong>Data:</strong>
+            {{ fair.date }}
+        </p>
+        <button class="details-btn" [routerLink]="['/fira', fair.activityId]">
+            Veure detall
+        </button>
+        <button class="favorite-btn" [class.favorite-active]="isFavorite(fair.activityId)"
+            (click)="onToggleFavorite(fair.activityId)">
+            Desmarcar de preferits
+        </button>
+    </div>
+    }
+</div>

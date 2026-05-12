@@ -1,0 +1,15 @@
+<div class="selector-box">
+    <h2>Selecciona una comarca</h2>
+    <select [value]="selectedComarca()" (change)="selectedComarca.set($any($event.target).value)">
+        <option value="">
+            --- Selecciona una comarca ---
+        </option>
+        @for(comarca of comarques; track comarca) {
+        <option [value]="comarca">
+            {{ comarca }}
+        </option>
+        }
+    </select>
+</div>
+
+<app-fair-list [selectedComarca]="selectedComarca()"></app-fair-list>

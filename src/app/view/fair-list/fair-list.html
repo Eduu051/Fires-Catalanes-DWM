@@ -1,0 +1,36 @@
+<div class="fair-list-container">
+    @if(selectedComarca()) {
+    <h2>
+        Fires de la comarca:
+        {{ selectedComarca() }}
+    </h2>
+    <div class="cards-container">
+        @for(fair of filteredFairs(); track fair.activityId) {
+        <div class="fair-card">
+            <div class="card-body">
+                <h3>
+                    {{ fair.activityName }}
+                </h3>
+                <p>
+                    <strong>Municipi:</strong>
+                    {{ fair.municipalityName }}
+                </p>
+                <p>
+                    <strong>Data:</strong>
+                    {{ fair.date }}
+                </p>
+                <div class="buttons">
+                    <button class="details-btn" [routerLink]="['/fira', fair.activityId]">
+                        Veure detall
+                    </button>
+                    <button class="favorite-btn" [class.favorite-active]="isFavorite(fair.activityId)"
+                        (click)="onToggleFavorite(fair.activityId)">
+                        {{ isFavorite(fair.activityId) ? 'Desmarcar de preferits' : 'Preferits' }}
+                    </button>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+    }
+</div>
