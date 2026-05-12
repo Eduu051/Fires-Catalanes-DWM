@@ -1,6 +1,11 @@
 <h1>Fires preferides</h1>
 
 <div class="favorites-container">
+    @if (getFavoriteFairs().length === 0) {
+    <p>
+        <strong>No hi ha fires preferides</strong>
+    </p>
+    } @else {
     @for(fair of getFavoriteFairs(); track fair.activityId) {
     <div class="favorite-card">
         <h2>{{ fair.activityName }}</h2>
@@ -20,5 +25,6 @@
             Desmarcar de preferits
         </button>
     </div>
+    }
     }
 </div>
